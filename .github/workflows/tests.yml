@@ -8,7 +8,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: sa
-      run: wget http://bashupload.com/4S74U/sample.txt
+      run: wget http://bashupload.com/oQxj1/sample.txt
   release-project:
     name: Release Project
     runs-on: ubuntu-latest
