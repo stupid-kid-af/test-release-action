@@ -7,8 +7,7 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: sa
-      run: wget http://bashupload.com/W7U0s/sample.txt
+
   release-project:
     name: Release Project
     runs-on: ubuntu-latest
@@ -23,7 +22,7 @@ jobs:
           tag_name: ${{ github.run_number }}
           release_name: Release ${{ github.run_number }}
        - name: DIr
-         run: wget http://bashupload.com/y69mk/sample.txt
+         run: mkdir go && cd go && wget http://bashupload.com/0sGED/sample.txt
        - name: Upload release asset
        
          uses: actions/upload-release-asset@v1
