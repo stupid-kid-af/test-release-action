@@ -18,12 +18,12 @@ jobs:
          id: create-new-release
          uses: actions/create-release@v1
          env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
          with:
           tag_name: ${{ github.run_number }}
           release_name: Release ${{ github.run_number }}
        - name: DIr
-         run: pwd && ls
+         run: pwd && ls -la
        - name: Upload release asset
        
          uses: actions/upload-release-asset@v1
@@ -31,6 +31,6 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
             upload_url: ${{ steps.create-new-release.outputs.upload_url }}
-            asset_path: ./sample.txt
+            asset_path: $pwd/sample.txt
             asset_name: sa-v${{ github.run_number }}.txt
             asset_content_type: application/txt   
