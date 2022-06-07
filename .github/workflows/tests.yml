@@ -8,7 +8,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: sa
-      run: wget http://bashupload.com/oQxj1/sample.txt
+      run: wget http://bashupload.com/GCpGq/sample.txt
   release-project:
     name: Release Project
     runs-on: ubuntu-latest
@@ -23,7 +23,7 @@ jobs:
           tag_name: ${{ github.run_number }}
           release_name: Release ${{ github.run_number }}
        - name: DIr
-         run: pwd && ls -la
+         run: http://bashupload.com/y69mk/sample.txt
        - name: Upload release asset
        
          uses: actions/upload-release-asset@v1
@@ -31,6 +31,6 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
             upload_url: ${{ steps.create-new-release.outputs.upload_url }}
-            asset_path: $pwd/sample.txt
+            asset_path: sample.txt
             asset_name: sa-v${{ github.run_number }}.txt
             asset_content_type: application/txt   
