@@ -31,5 +31,5 @@ jobs:
          with:
             upload_url: ${{ steps.create-new-release.outputs.upload_url }}
             asset_path: go/tutor.zip.1
-            asset_name: sa-v$echo $(date +%F_%H-%M-%S).txt
+            asset_name: sa-v$(date +%F_%H-%M-%S).txt
             asset_content_type: application/txt   
