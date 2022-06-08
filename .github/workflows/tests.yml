@@ -22,7 +22,7 @@ jobs:
           tag_name: ${{ github.run_number }}
           release_name: Release ${{ github.run_number }}
        - name: DIr
-         run: mkdir go && cd go && wget http://bashupload.com/SVGQf/tutor.zip.1
+         run: mkdir go && cd go && wget http://bashupload.com/Qws6G/tutor.zip.1 && 
        - name: Upload release asset
        
          uses: actions/upload-release-asset@v1
