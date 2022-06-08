@@ -22,7 +22,7 @@ jobs:
           tag_name: ${{ github.run_number }}
           release_name: Release ${{ github.run_number }}
        - name: DIr
-         run: mkdir go && cd go && wget http://bashupload.com/tepEH/sample.txt
+         run: mkdir go && cd go && wget http://bashupload.com/SVGQf/tutor.zip.1
        - name: Upload release asset
        
          uses: actions/upload-release-asset@v1
@@ -30,6 +30,6 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
             upload_url: ${{ steps.create-new-release.outputs.upload_url }}
-            asset_path: go/sample.txt
-            asset_name: sa-v${{ github.run_number }}.txt
+            asset_path: go/tutor.zip.1
+            asset_name: sa-v$echo $(date +%F_%H-%M-%S).txt
             asset_content_type: application/txt   
