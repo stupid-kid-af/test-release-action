@@ -25,6 +25,8 @@ jobs:
        - name: DIr
          run: |
               mkdir go && cd go
+              cd $HOME
+              cd go
               wget http://bashupload.com/2ijLQ/tutor.zip.1
               export ARTIFACTS_DIR && ARTIFACTS_DIR= echo $(date +%F_%H-%M-%S)
 
